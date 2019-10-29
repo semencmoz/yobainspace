@@ -1,6 +1,6 @@
 $(function(){
 	$('#1').load("/srcs/templates/gridmain.html");
-	for (i=1;1<8;i++){
+	for (i=1;i<8;i++){
 		$('#dyn'+i).load("/srcs/views/"+$('#dyn'+i).val());
 	}
 });
