@@ -1,5 +1,5 @@
 $(function(){
-	reLoadGrid("/srcs/templates/gridmain.html",7);
+	reLoadGrid("/srcs/templates/gridmain.html",5);
 });
 
 function reLoadGrid(gridname, dynelemcount){//загрузить или перезагрузить пустую сетку, по окончанию вставить в сетку дочерние файлы
