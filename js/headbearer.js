@@ -2,10 +2,6 @@ $(function(){
 	reLoadGrid("/srcs/templates/gridmain.html",7);
 });
 
-function loadGrid(gridname){//загрузить или перезагрузить пустую сетку
-	$('#1').load(gridname);
-}
-
 function reLoadGrid(gridname,dynelemcount){//загрузить или перезагрузить пустую сетку, по окончанию вставить в сетку дочерние файлы
 	$('#1').load(gridname, processGrid(dynelemcount));
 }
@@ -17,6 +13,11 @@ function processGrid(dynelemcount){//вставить в сетку дочерн
 	}
 }
 
-/*import('kickass.js').then(module => {
+/*
+function loadGrid(gridname){//загрузить или перезагрузить пустую сетку
+	$('#1').load(gridname);
+}
+
+import('kickass.js').then(module => {
 	alert(module.readfile("/srcs/planedata.yb"));
 })*/
