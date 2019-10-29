@@ -7,7 +7,7 @@ function loadGrid(gridname){//загрузить или перезагрузит
 }
 
 function reLoadGrid(gridname,dynelemcount){//загрузить или перезагрузить пустую сетку, по окончанию вставить в сетку дочерние файлы
-	$('#1').load(gridname).done(processGrid(dynelemcount));
+	$('#1').load(gridname, processGrid(dynelemcount));
 }
 
 function processGrid(dynelemcount){//вставить в сетку дочерние файлы
