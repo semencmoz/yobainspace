@@ -31,7 +31,8 @@ function centerLoadText(){
 	request.open('GET', '/srcs/planedata.yb', false);
 	request.onreadystatechange = function(){
 		if (request.readyState === 4) {
-        var textfileContent = JSON.parse(request.responseText);
+		var textfileContent = JSON.parse(request.responseText);
+		console.log(textfileContent);
 			loadWidget("/srcs/views/textFromFile.html", 3);
 			$("#textSpan").text(textfileContent[0]);
     	}
