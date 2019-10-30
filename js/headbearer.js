@@ -20,7 +20,7 @@ function processGrid(dynelemcount){//вставить в сетку дочерн
 
 function loadWidget(filename, number){//Загрузить виджет в позицию на сетке
 	element = $('#dyn'+number);
-	element.load("/srcs/views/"+filename, null, function(response, status, xhr){
+	element.load(filename, null, function(response, status, xhr){
 	if (status == "error") console.log("grid load status error: "+xhr.status + " " + xhr.statusText);
 	else return;
 	});
