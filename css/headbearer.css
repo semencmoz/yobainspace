@@ -1,6 +1,7 @@
 @import url("/css/bootstrap/bootstrap.min.css");
 @import url("/css/bootstrap/bootstrap-grid.min.css");
 @import url("/css/bootstrap/bootstrap-reboot.min.css");
+@import url("/css/footer.css");
 
 body {
 	background-image: url("/imgs/bckgrd.compressed.jpg");

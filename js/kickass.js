@@ -13,3 +13,7 @@ function readfile(name){
     rawFile.send(null);
     return(allText);
 }
+
+function loadText(){
+    
+}
