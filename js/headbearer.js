@@ -33,25 +33,14 @@ function centerLoadText(){
 		cache: false,
 		dataType: "text",
 		success: function(data, textStatus, jqXHR){
-			console.log(data);
 			var textfileContent = JSON.parse(data);
 			console.log(textfileContent);
-			loadWidget("/srcs/views/textFromFile.html", 3);
-			$("#textSpan").text(textfileContent[0][0]);
+			$('#dyn3').load("/srcs/views/textFromFile.html", null, function(response, status, xhr){
+			if (status == "error") console.log("grid load status error: "+xhr.status + " " + xhr.statusText);
+			else $("#textSpan").text(textfileContent[0][0]);
+			});
 		}
 	});
-/*
-	var request = new XMLHttpRequest();
-	request.open('GET', '/srcs/planedata.yb', false);
-	request.onreadystatechange = function(){
-		if (request.readyState === 4) {
-		var textfileContent = JSON.parse(request.responseText);
-		console.log(textfileContent);
-			loadWidget("/srcs/views/textFromFile.html", 3);
-			$("#textSpan").text(textfileContent[0][0]);
-    	}
-	}
-	request.send(null);*/
 }
 
 /*
