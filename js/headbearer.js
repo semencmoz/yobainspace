@@ -27,6 +27,20 @@ function loadWidget(filename, number){//Загрузить виджет в по�
 }
 
 function centerLoadText(){
+	$.ajax({
+		url: "/srcs/planedata.yb",
+		async: true,
+		cache: false,
+		dataType: "text",
+		success: function(data, textStatus, jqXHR){
+			console.log(data);
+			var textfileContent = JSON.parse(data);
+			console.log(textfileContent);
+			loadWidget("/srcs/views/textFromFile.html", 3);
+			$("#textSpan").text(textfileContent[0][0]);
+		}
+	});
+/*
 	var request = new XMLHttpRequest();
 	request.open('GET', '/srcs/planedata.yb', false);
 	request.onreadystatechange = function(){
@@ -34,10 +48,10 @@ function centerLoadText(){
 		var textfileContent = JSON.parse(request.responseText);
 		console.log(textfileContent);
 			loadWidget("/srcs/views/textFromFile.html", 3);
-			$("#textSpan").text(textfileContent[0]);
+			$("#textSpan").text(textfileContent[0][0]);
     	}
 	}
-	request.send(null);
+	request.send(null);*/
 }
 
 /*
